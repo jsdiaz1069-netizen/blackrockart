@@ -1,0 +1,158 @@
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BlackRock Art | Diseño que vende</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="sortcut icon" href="images/logo.png.png"/>
+</head>
+<body>
+
+
+<header class="header">
+  <img src="images/logo.png.png" alt="BlackRock Art Logo" class="logo">
+  <p>Diseño que vende · Imagen profesional para tu negocio</p>
+</header>
+
+<section class="section">
+<h2>Servicios</h2>
+<div class="services">
+<div class="card">
+<h3>Diseño para Redes</h3>
+<p>Posts atractivos para Instagram y Facebook que generan más ventas.</p>
+</div>
+<div class="card">
+<h3>Flyers Promocionales</h3>
+<p>Promociones visuales claras y llamativas para tu negocio.</p>
+</div>
+<div class="card">
+<h3>Identidad Visual</h3>
+<p>Colores y estilo profesional que generan confianza.</p>
+</div>
+</div>
+</section>
+
+
+<section class="section">
+<h2>Paquetes</h2>
+<div class="packages">
+<div class="card">
+<h3>Básico</h3>
+<p>2 posts + 1 flyer</p>
+<span class="price">$30.000 COP</span>
+</div>
+<div class="card">
+<h3>Popular</h3>
+<p>4 posts + 1 flyer + estilo visual</p>
+<span class="price">$50.000 COP</span>
+</div>
+<div class="card">
+<h3>Mensual</h3>
+<p>12 posts + 4 historias</p>
+<span class="price">$100.000 COP</span>
+</div>
+</div>
+</section>
+
+<section class="section">
+  <h2>Portafolio</h2>
+
+    <div class="services">
+    <div class="card">
+      <img src="images/imagesportfolio/post1.jpg" alt="Diseño Instagram" class="portfolio-img">
+      <h3>Post para Instagram</h3>
+      <p>Diseño promocional moderno para redes sociales.</p>
+    </div>
+
+     <div class="card">
+      <img src="images/imagesportfolio/post2.jpg" alt="Flyer publicitario" class="portfolio-img">
+      <h3>Flyer publicitario</h3>
+      <p>Diseño llamativo para promociones y ofertas.</p>
+    </div>
+
+
+   <div class="card">
+      <img src="images/imagesportfolio/post3.jpg" alt="Identidad visual" class="portfolio-img">
+      <h3>Identidad visual</h3>
+      <p>Colores y estilo profesional para negocios.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+<h2>Haz que tu negocio se vea profesional</h2>
+<a href="https://wa.me/573183009521?text=Hola%20estoy%20interesado%20en%20sus%20servicios%20de%20diseño" 
+   class="btn" target="_blank">
+   Contactar por WhatsApp
+</a>
+</section>
+
+<section class="section">
+  <div class="contact">
+    <h2>Contacto</h2>
+    <p>
+      ¿Tienes un proyecto o una idea en mente?  
+      Escríbeme y lo hacemos realidad.
+    </p>
+
+   <form class="contact-form" onsubmit="sendWhatsApp(event)">
+  <input type="text" id="name" placeholder="Tu nombre" required>
+  <input type="email" id="email" placeholder="Tu correo" required>
+  <textarea id="message" placeholder="Cuéntame sobre tu proyecto" required></textarea>
+  <button type="submit">Enviar mensaje</button>
+</form>
+  </div>
+</section>
+
+<footer class="footer">
+© 2026 BlackRock Art · Diseño digital
+</footer>
+
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/573183009521?text=Hola%20estoy%20interesado%20en%20sus%20servicios%20de%20diseño"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="WhatsApp">
+  <span style="font-size:30px;">💬</span>
+</a>
+
+<script>
+  const cards = document.querySelectorAll('.card');
+
+  const showCards = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+      const cardTop = card.getBoundingClientRect().top;
+
+      if(cardTop < triggerBottom){
+        card.classList.add('show');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', showCards);
+  showCards();
+</script>
+
+<script>
+  function sendWhatsApp(event){
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const phone = "573183009521"; // ejemplo: 573001234567
+
+    const text = `Hola, mi nombre es ${name}.
+Correo: ${email}
+Mensaje: ${message}`;
+
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>

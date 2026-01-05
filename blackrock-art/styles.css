@@ -1,0 +1,363 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+background:#0b0b0b;
+color:#ffffff;
+line-height:1.6;
+}
+
+
+/* HEADER */
+.header{
+text-align:center;
+padding:60px 20px;
+border-bottom:1px solid #1f1f1f;
+}
+
+
+.header h1{
+font-size:3rem;
+letter-spacing:2px;
+}
+
+
+.header h1 span{
+color:#7f3cff;
+}
+
+
+.header p{
+margin-top:10px;
+color:#bdbdbd;
+}
+
+
+/* SECTIONS */
+.section{
+max-width:1100px;
+margin:auto;
+padding:70px 20px;
+}
+
+
+.section h2{
+margin-bottom:40px;
+font-size:2rem;
+text-align:center;
+}
+
+
+/* GRID */
+.services,
+.packages{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+gap:30px;
+}
+
+
+/* CARDS */
+.card{
+background:#111111;
+padding:30px;
+border-radius:18px;
+box-shadow:0 0 25px rgba(127,60,255,0.15);
+transition:transform 0.3s, box-shadow 0.3s;
+}
+
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 35px rgba(212,175,55,0.6);
+}
+
+
+.card h3{
+color:#7f3cff;
+margin-bottom:15px;
+}
+
+
+.card p{
+color:#d0d0d0;
+}
+
+
+.price{
+display:block;
+margin-top:15px;
+font-size:1.5rem;
+font-weight:bold;
+}
+
+
+/* CTA */
+.cta{
+background:linear-gradient(135deg, #000000, #0f2027);
+text-align:center;
+padding:90px 20px;
+}
+
+.cta h2{
+font-size:2.5rem;
+margin-bottom:30px;
+}
+
+/* LOGO */
+.logo{
+  width:180px;
+  margin-bottom:20px;
+  filter: drop-shadow(0 0 15px rgba(180,120,255,0.6));
+}
+
+/* LOGO */
+.logo{
+  width:180px;
+  margin-bottom:20px;
+  filter: drop-shadow(0 0 15px rgba(180,120,255,0.6));
+  animation: logoEnter 1.2s ease-out both;
+}
+
+/* Animación de entrada */
+@keyframes logoEnter{
+  0%{
+    opacity: 0;
+    transform: translateY(-25px) scale(0.9);
+  }
+  60%{
+    opacity: 1;
+    transform: translateY(0) scale(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.btn{
+display:inline-block;
+padding:15px 40px;
+background:#7f3cff;
+color:#000000;
+text-decoration:none;
+font-weight:bold;
+border-radius:30px;
+transition:background 0.3s, transform 0.3s;
+}
+
+
+.btn:hover{
+background:#6a2fd1;
+transform:scale(1.05);
+}
+
+
+/* FOOTER */
+.footer{
+text-align:center;
+padding:30px 10px;
+font-size:0.9rem;
+color:#8a8a8a;
+border-top:1px solid #1f1f1f;
+}
+
+
+/* WHATSAPP FLOAT BUTTON */
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+width:60px;
+height:60px;
+background:linear-gradient(135deg, #7f3cff, #d4af37);
+color:#000;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 0 25px rgba(180,120,255,0.6);
+z-index:999;
+transition:transform 0.3s, box-shadow 0.3s;
+}
+
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+box-shadow:0 0 40px rgba(212,175,55,0.9);
+}
+
+/* SCROLL ANIMATIONS */
+.card{
+opacity:0;
+transform: translateY(30px);
+transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+
+.card.show{
+opacity:1;
+transform: translateY(0);
+}
+
+/* RESPONSIVE MOBILE ULTRA PRO */
+@media (max-width: 768px){
+.header{
+padding:40px 15px;
+}
+
+
+.logo{
+width:140px;
+}
+
+
+.header h1{
+font-size:2.2rem;
+}
+
+
+.header p{
+font-size:0.95rem;
+}
+
+
+.section{
+padding:50px 15px;
+}
+
+
+.section h2{
+font-size:1.6rem;
+}
+
+
+.card{
+padding:25px;
+}
+
+
+.price{
+font-size:1.3rem;
+}
+
+
+.cta{
+padding:70px 15px;
+}
+
+
+.cta h2{
+font-size:1.9rem;
+}
+
+
+.btn{
+padding:14px 30px;
+font-size:0.95rem;
+}
+
+
+.whatsapp-float{
+width:55px;
+height:55px;
+font-size:24px;
+bottom:20px;
+right:20px;
+}
+}
+
+
+@media (max-width: 480px){
+.header h1{
+font-size:1.9rem;
+}
+
+
+.cta h2{
+font-size:1.6rem;
+}
+}
+
+/* PORTFOLIO IMAGES */
+.portfolio-img{
+width:100%;
+border-radius:14px;
+margin-bottom:15px;
+transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+.card:hover .portfolio-img{
+transform: scale(1.05);
+box-shadow:0 0 30px rgba(127,60,255,0.6);
+}
+
+/* CONTACT PAGE */
+.contact{
+max-width:700px;
+margin:auto;
+text-align:center;
+}
+
+
+.contact p{
+color:#bdbdbd;
+margin-bottom:30px;
+}
+
+
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+
+.contact-form input,
+.contact-form textarea{
+padding:14px 16px;
+background:#111;
+border:1px solid #2a2a2a;
+border-radius:12px;
+color:#fff;
+font-size:0.95rem;
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+outline:none;
+border-color:#7f3cff;
+box-shadow:0 0 12px rgba(127,60,255,0.5);
+}
+
+
+.contact-form textarea{
+resize:none;
+height:140px;
+}
+
+
+.contact-form button{
+padding:15px;
+border:none;
+border-radius:30px;
+background:linear-gradient(135deg, #7f3cff, #d4af37);
+color:#000;
+font-weight:bold;
+cursor:pointer;
+transition:transform 0.3s, box-shadow 0.3s;
+}
+
+
+.contact-form button:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px rgba(212,175,55,0.8);
+}
